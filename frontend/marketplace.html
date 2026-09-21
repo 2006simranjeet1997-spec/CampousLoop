@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Marketplace | CampusLoop</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/marketplace.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                CampusLoop
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="marketplace.html">
+                        Marketplace
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        How It Works
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <a href="#" class="login-btn">
+                    Login
+                </a>
+
+                <a href="#" class="signup-btn">
+                    Sign Up
+                </a>
+
+                <a href="#" class="list-btn">
+                    List an Item
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+        <!-- =========================
+             MARKETPLACE HERO
+        ========================== -->
+
+        <section class="marketplace-hero">
+
+            <div class="marketplace-heading">
+
+                <p class="section-label">
+                    CAMPUS MARKETPLACE
+                </p>
+
+                <h1>
+                    Find what you need.
+                    <span>Right on campus.</span>
+                </h1>
+
+                <p>
+                    Browse items listed by students around you.
+                    Buy, sell, borrow, rent, or swap.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for books, laptops, notes..."
+                >
+
+                <button
+                    type="button"
+                    id="searchButton"
+                >
+                    🔍 Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MARKETPLACE CONTENT
+        ========================== -->
+
+        <section class="marketplace-content">
+
+
+            <!-- =========================
+                 FILTERS
+            ========================== -->
+
+            <div class="filters">
+
+
+                <!-- CATEGORY FILTER -->
+
+                <div class="filter-group">
+
+                    <h3>
+                        Categories
+                    </h3>
+
+                    <div class="filter-buttons">
+
+                        <button
+                            type="button"
+                            class="filter-btn active"
+                            data-category="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="books"
+                        >
+                            Books
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="electronics"
+                        >
+                            Electronics
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="notes"
+                        >
+                            Notes
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="clothing"
+                        >
+                            Clothing
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="essentials"
+                        >
+                            Essentials
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-btn"
+                            data-category="sports"
+                        >
+                            Sports
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSACTION TYPE FILTER -->
+
+                <div class="filter-group">
+
+                    <h3>
+                        Looking for
+                    </h3>
+
+                    <div class="filter-buttons">
+
+                        <button
+                            type="button"
+                            class="type-btn active"
+                            data-type="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="type-btn"
+                            data-type="sell"
+                        >
+                            Buy / Sell
+                        </button>
+
+                        <button
+                            type="button"
+                            class="type-btn"
+                            data-type="rent"
+                        >
+                            Rent
+                        </button>
+
+                        <button
+                            type="button"
+                            class="type-btn"
+                            data-type="borrow"
+                        >
+                            Borrow
+                        </button>
+
+                        <button
+                            type="button"
+                            class="type-btn"
+                            data-type="swap"
+                        >
+                            Swap
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 LISTING HEADER
+            ========================== -->
+
+            <div class="listing-header">
+
+                <div>
+
+                    <p class="section-label">
+                        STUDENT LISTINGS
+                    </p>
+
+                    <h2>
+                        Available on campus
+                    </h2>
+
+                </div>
+
+                <p id="resultCount">
+                    6 items
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 LISTING GRID
+            ========================== -->
+
+            <div
+                class="marketplace-grid"
+                id="listingGrid"
+            >
+
+
+                <!-- =====================
+                     BOOK
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="books"
+                    data-type="sell"
+                >
+
+                    <div class="marketplace-image">
+
+                        📚
+
+                        <span>
+                            SELL
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Books
+                        </p>
+
+                        <h3>
+                            Data Structures & Algorithms
+                        </h3>
+
+                        <p>
+                            Good condition textbook for CSE students.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                ₹350
+                            </strong>
+
+                            <a
+                                href="item.html?id=book"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     LAPTOP
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="electronics"
+                    data-type="rent"
+                >
+
+                    <div class="marketplace-image">
+
+                        💻
+
+                        <span>
+                            RENT
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Electronics
+                        </p>
+
+                        <h3>
+                            HP Laptop
+                        </h3>
+
+                        <p>
+                            Available for short-term student projects.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                ₹800
+                            </strong>
+
+                            <small>
+                                /week
+                            </small>
+
+                            <a
+                                href="item.html?id=laptop"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     CALCULATOR
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="electronics"
+                    data-type="sell"
+                >
+
+                    <div class="marketplace-image">
+
+                        🧮
+
+                        <span>
+                            SELL
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Electronics
+                        </p>
+
+                        <h3>
+                            Scientific Calculator
+                        </h3>
+
+                        <p>
+                            Perfect for engineering mathematics and exams.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                ₹500
+                            </strong>
+
+                            <a
+                                href="item.html?id=calculator"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     BACKPACK
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="essentials"
+                    data-type="sell"
+                >
+
+                    <div class="marketplace-image">
+
+                        🎒
+
+                        <span>
+                            SELL
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Essentials
+                        </p>
+
+                        <h3>
+                            College Backpack
+                        </h3>
+
+                        <p>
+                            Spacious backpack for everyday college use.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                ₹600
+                            </strong>
+
+                            <a
+                                href="item.html?id=backpack"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     NOTES
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="notes"
+                    data-type="sell"
+                >
+
+                    <div class="marketplace-image">
+
+                        📝
+
+                        <span>
+                            SELL
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Notes
+                        </p>
+
+                        <h3>
+                            DBMS Semester Notes
+                        </h3>
+
+                        <p>
+                            Complete handwritten notes for semester exams.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                ₹150
+                            </strong>
+
+                            <a
+                                href="item.html?id=notes"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     CLOTHING
+                ====================== -->
+
+                <article
+                    class="marketplace-card"
+                    data-category="clothing"
+                    data-type="swap"
+                >
+
+                    <div class="marketplace-image">
+
+                        👕
+
+                        <span>
+                            SWAP
+                        </span>
+
+                    </div>
+
+
+                    <div class="marketplace-card-content">
+
+                        <p class="listing-category">
+                            Clothing
+                        </p>
+
+                        <h3>
+                            College Hoodie
+                        </h3>
+
+                        <p>
+                            Looking to swap for another college hoodie.
+                        </p>
+
+
+                        <div class="marketplace-card-bottom">
+
+                            <strong>
+                                Swap
+                            </strong>
+
+                            <a
+                                href="item.html?id=hoodie"
+                                class="view-item-btn"
+                            >
+                                View Item
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/marketplace.js"></script>
+
+</body>
+
+</html>
