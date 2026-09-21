@@ -36,4 +36,4 @@ CampusLoop is a campus marketplace where students can **buy, sell, borrow, and s
 * GitHub
 * VS Code
 
-🚧 **Project is currently under development.**
+## Still in working Phase..
